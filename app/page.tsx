@@ -22,7 +22,7 @@ const TABS: { key: 'any' | Category; label: string }[] = [
   { key: 'monthly', label: 'Monthly games' },
 ]
 
-function useDebounced<T>(value: T, delay = 300) {
+function useDebounced<T>(value: T, delay = 100) {
   const [debounced, setDebounced] = useState(value)
   useEffect(() => {
     const t = setTimeout(() => setDebounced(value), delay)
@@ -36,7 +36,7 @@ export default function HomePage() {
   const [error, setError] = useState<string | null>(null)
   const [active, setActive] = useState<'any' | Category>('any')
   const [query, setQuery] = useState('')
-  const debouncedQuery = useDebounced(query, 300)
+  const debouncedQuery = useDebounced(query, 100)
 
   const fetchData = useCallback(async () => {
     setError(null)
@@ -149,6 +149,8 @@ export default function HomePage() {
                     src={g.imageUrl}
                     width={300}
                     height={400}
+                    sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, (max-width: 1024px) 25vw, 20vw"
+                    loading="lazy"
                     className="h-full w-full object-cover"
                     draggable={false}
                     priority={false}

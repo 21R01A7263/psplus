@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server'
+import { unstable_cache } from 'next/cache'
 
 export const revalidate = 21600 // 6h ISR for the route
 
@@ -36,8 +37,9 @@ export async function OPTIONS() {
   return cors(new NextResponse(null, { status: 204 }))
 }
 
-export async function GET() {
-  try {
+// Memoized aggregator using Next's cache with ISR and tagging
+const getGamesCached = unstable_cache(
+  async () => {
     const settled = await Promise.allSettled(
       ENDPOINTS.map(e =>
         fetch(e.url, { next: { revalidate } })
@@ -74,10 +76,24 @@ export async function GET() {
     }
 
     const list = Array.from(map.values())
-    // Sort once server-side to reduce client work
     list.sort((a, b) => a.name.localeCompare(b.name))
 
-    const res = NextResponse.json(list)
+    return { list, failed }
+  },
+  ['psplus-games-cache'],
+  { revalidate, tags: ['games'] }
+)
+
+export async function GET() {
+  try {
+    const { list, failed } = await getGamesCached()
+
+    const res = NextResponse.json(list, {
+      headers: {
+        // cache at the CDN/Edge for 1h; serve stale up to a week
+        'Cache-Control': 'public, s-maxage=3600, stale-while-revalidate=604800'
+      }
+    })
     if (failed > 0) {
       res.headers.set('X-Partial-Data', 'true')
       res.headers.set('X-Partial-Failures', String(failed))
