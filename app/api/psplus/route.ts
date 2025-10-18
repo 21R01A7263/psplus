@@ -38,8 +38,20 @@ export async function OPTIONS() {
 
 export async function GET() {
   try {
-    const fetches = ENDPOINTS.map(e => fetch(e.url, { next: { revalidate: revalidate } }).then(r => r.json()).then((arr: any[]) => ({ key: e.key, arr })))
-    const results = await Promise.all(fetches)
+    const settled = await Promise.allSettled(
+      ENDPOINTS.map(e =>
+        fetch(e.url, { next: { revalidate } })
+          .then(r => r.json())
+          .then((arr: any[]) => ({ key: e.key, arr }))
+      )
+    )
+
+    const results: { key: Category; arr: any[] }[] = []
+    let failed = 0
+    for (const s of settled) {
+      if (s.status === 'fulfilled') results.push(s.value)
+      else failed++
+    }
 
     const map = new Map<number, Game>()
 
@@ -65,7 +77,12 @@ export async function GET() {
     // Sort once server-side to reduce client work
     list.sort((a, b) => a.name.localeCompare(b.name))
 
-    return cors(NextResponse.json(list))
+    const res = NextResponse.json(list)
+    if (failed > 0) {
+      res.headers.set('X-Partial-Data', 'true')
+      res.headers.set('X-Partial-Failures', String(failed))
+    }
+    return cors(res)
   } catch (e: any) {
     return cors(NextResponse.json({ error: e?.message ?? 'Failed to fetch' }, { status: 500 }))
   }

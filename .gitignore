@@ -1,1 +1,8 @@
 /node_modules
+/.next
+dist/
+out/
+coverage/
+*.log
+npm-debug.log*
+.env*

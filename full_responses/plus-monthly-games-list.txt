@@ -1,0 +1,255 @@
+[
+    {
+        "catalogKey": "A",
+        "count": 1,
+        "games": [
+            {
+                "conceptId": 10002065,
+                "name": "Alan Wake 2",
+                "nameEn": "Alan Wake 2",
+                "conceptUrl": "https://store.playstation.com/en-in/concept/10002065",
+                "imageUrl": "https://image.api.playstation.com/vulcan/ap/rnd/202305/2420/c3daf3037feb797d9e71b81618e3b5ff3ff1f9609db5a4a2.png",
+                "genre": [
+                    "HORROR"
+                ],
+                "ageRating": {
+                    "authority": "Generic",
+                    "description": "IARC 18+",
+                    "name": "GENERIC_18",
+                    "url": "https://image.api.playstation.com/grc/images/ratings/hd/generic/iarc_18.png",
+                    "url4k": "https://image.api.playstation.com/grc/images/ratings/4k/generic/iarc_18.png",
+                    "descriptors": [
+                        {
+                            "description": "Extreme Violence",
+                            "name": "GENERIC_EXTREME_VIOLENCE"
+                        },
+                        {
+                            "description": "Strong Language",
+                            "name": "GENERIC_STRONG_LANGUAGE"
+                        }
+                    ],
+                    "interactiveElements": [
+                        {
+                            "description": "In-Game Purchases",
+                            "name": "GENERIC_IN_GAME_PURCHASES"
+                        }
+                    ]
+                },
+                "device": [
+                    "PS5"
+                ],
+                "releaseDate": "2023-10-27T04:00:00Z",
+                "productId": "EP1464-PPSA02572_00-ALANWAKE20000000",
+                "streamingSupported": false
+            }
+        ]
+    },
+    {
+        "catalogKey": "B",
+        "count": 0,
+        "games": []
+    },
+    {
+        "catalogKey": "C",
+        "count": 1,
+        "games": [
+            {
+                "conceptId": 10005446,
+                "name": "COCOON",
+                "nameEn": "COCOON",
+                "conceptUrl": "https://store.playstation.com/en-in/concept/10005446",
+                "imageUrl": "https://image.api.playstation.com/vulcan/ap/rnd/202308/0320/edce2d3e20cb874ad82bbf54f00c9e2a3adf7f5bf77665ca.png",
+                "genre": [
+                    "ADVENTURE"
+                ],
+                "ageRating": {
+                    "authority": "Generic",
+                    "description": "IARC 7+",
+                    "name": "GENERIC_7",
+                    "url": "https://image.api.playstation.com/grc/images/ratings/hd/generic/iarc_7.png",
+                    "url4k": "https://image.api.playstation.com/grc/images/ratings/4k/generic/iarc_7.png",
+                    "descriptors": [
+                        {
+                            "description": "Fear",
+                            "name": "GENERIC_FEAR"
+                        },
+                        {
+                            "description": "Mild Violence",
+                            "name": "GENERIC_MILD_VIOLENCE"
+                        }
+                    ],
+                    "interactiveElements": []
+                },
+                "device": [
+                    "PS4",
+                    "PS5"
+                ],
+                "releaseDate": "2023-09-29T16:00:00Z",
+                "productId": "EP2333-PPSA08766_00-COCOONSIEE000000",
+                "streamingSupported": false
+            }
+        ]
+    },
+    {
+        "catalogKey": "D",
+        "count": 0,
+        "games": []
+    },
+    {
+        "catalogKey": "E",
+        "count": 0,
+        "games": []
+    },
+    {
+        "catalogKey": "F",
+        "count": 0,
+        "games": []
+    },
+    {
+        "catalogKey": "G",
+        "count": 1,
+        "games": [
+            {
+                "conceptId": 10003123,
+                "name": "Goat Simulator 3",
+                "nameEn": "Goat Simulator 3",
+                "conceptUrl": "https://store.playstation.com/en-in/concept/10003123",
+                "imageUrl": "https://image.api.playstation.com/vulcan/ap/rnd/202211/1410/KwoCdV1Juhep39EFodzTDJjZ.png",
+                "genre": [
+                    "SIMULATION",
+                    "ADVENTURE"
+                ],
+                "ageRating": {
+                    "authority": "Generic",
+                    "description": "IARC 12+",
+                    "name": "GENERIC_12",
+                    "url": "https://image.api.playstation.com/grc/images/ratings/hd/generic/iarc_12.png",
+                    "url4k": "https://image.api.playstation.com/grc/images/ratings/4k/generic/iarc_12.png",
+                    "descriptors": [
+                        {
+                            "description": "Mild Swearing",
+                            "name": "GENERIC_MILD_SWEARING"
+                        },
+                        {
+                            "description": "Moderate Violence",
+                            "name": "GENERIC_MODERATE_VIOLENCE"
+                        }
+                    ],
+                    "interactiveElements": [
+                        {
+                            "description": "Users Interact",
+                            "name": "GENERIC_USERS_INTERACT"
+                        }
+                    ]
+                },
+                "device": [
+                    "PS4",
+                    "PS5"
+                ],
+                "releaseDate": "2022-11-16T18:30:00Z",
+                "productId": "EP4837-PPSA04158_00-GS3MAINGAMEPACK0",
+                "streamingSupported": false
+            }
+        ]
+    },
+    {
+        "catalogKey": "H",
+        "count": 0,
+        "games": []
+    },
+    {
+        "catalogKey": "I",
+        "count": 0,
+        "games": []
+    },
+    {
+        "catalogKey": "J",
+        "count": 0,
+        "games": []
+    },
+    {
+        "catalogKey": "K",
+        "count": 0,
+        "games": []
+    },
+    {
+        "catalogKey": "L",
+        "count": 0,
+        "games": []
+    },
+    {
+        "catalogKey": "M",
+        "count": 0,
+        "games": []
+    },
+    {
+        "catalogKey": "N",
+        "count": 0,
+        "games": []
+    },
+    {
+        "catalogKey": "O",
+        "count": 0,
+        "games": []
+    },
+    {
+        "catalogKey": "P",
+        "count": 0,
+        "games": []
+    },
+    {
+        "catalogKey": "Q",
+        "count": 0,
+        "games": []
+    },
+    {
+        "catalogKey": "R",
+        "count": 0,
+        "games": []
+    },
+    {
+        "catalogKey": "S",
+        "count": 0,
+        "games": []
+    },
+    {
+        "catalogKey": "T",
+        "count": 0,
+        "games": []
+    },
+    {
+        "catalogKey": "U",
+        "count": 0,
+        "games": []
+    },
+    {
+        "catalogKey": "V",
+        "count": 0,
+        "games": []
+    },
+    {
+        "catalogKey": "W",
+        "count": 0,
+        "games": []
+    },
+    {
+        "catalogKey": "X",
+        "count": 0,
+        "games": []
+    },
+    {
+        "catalogKey": "Y",
+        "count": 0,
+        "games": []
+    },
+    {
+        "catalogKey": "Z",
+        "count": 0,
+        "games": []
+    },
+    {
+        "catalogKey": "0-9",
+        "count": 0,
+        "games": []
+    }
+]

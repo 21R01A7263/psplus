@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 html, body {
-  @apply bg-white text-black font-inter;
+  @apply bg-white text-black;
 }
 
 /* Utility to prevent selecting text where applied */
