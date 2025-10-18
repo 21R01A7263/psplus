@@ -16,6 +16,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="preconnect" href="https://image.api.playstation.com" />
+        <link rel="dns-prefetch" href="//image.api.playstation.com" />
+      </head>
       <body className={`${inter.className} antialiased`}>{children}</body>
     </html>
   )

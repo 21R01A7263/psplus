@@ -1,5 +1,7 @@
 /**** @type {import('next').NextConfig} */
 const nextConfig = {
+  compress: true,
+  poweredByHeader: false,
   images: {
     remotePatterns: [
       {
@@ -7,8 +9,8 @@ const nextConfig = {
         hostname: 'image.api.playstation.com',
       }
     ],
-    // Long-lived browser cache for next/image requests
-    minimumCacheTTL: 60 * 60 * 24 * 2, // 2 days
+  // Long-lived browser cache for next/image requests
+  minimumCacheTTL: 60 * 60 * 24 * 3, // 3 days
   },
   experimental: {
     optimizePackageImports: ['react', 'react-dom']

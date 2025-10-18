@@ -1,6 +1,34 @@
 {
   "version": 3,
   "middleware": {},
-  "functions": {},
+  "functions": {
+    "/api/psplus/route": {
+      "files": [
+        "server/middleware-build-manifest.js",
+        "server/middleware-react-loadable-manifest.js",
+        "server/next-font-manifest.js",
+        "server/interception-route-rewrite-manifest.js",
+        "server/edge-runtime-webpack.js",
+        "server/app/api/psplus/route.js"
+      ],
+      "name": "app/api/psplus/route",
+      "page": "/api/psplus/route",
+      "matchers": [
+        {
+          "regexp": "^/api/psplus$",
+          "originalSource": "/api/psplus"
+        }
+      ],
+      "wasm": [],
+      "assets": [],
+      "env": {
+        "__NEXT_BUILD_ID": "8GneKhTPDP8UOHbnjxRSo",
+        "NEXT_SERVER_ACTIONS_ENCRYPTION_KEY": "Soe/K2YH3Hs6vEUjUaHl0h5o3rI0Ih6AS2SYJWd0Rt8=",
+        "__NEXT_PREVIEW_MODE_ID": "006036d0ab19cd6b364989f4c6985ab3",
+        "__NEXT_PREVIEW_MODE_ENCRYPTION_KEY": "29b2a75016a5e3518cffeb367d02471bf4ffa3bebbeb083c5c7ff5e005e08203",
+        "__NEXT_PREVIEW_MODE_SIGNING_KEY": "33c9a922cb49ed2a867a34d56bc2dab761ba2ce431dc58cae9ee3a6633892024"
+      }
+    }
+  },
   "sortedMiddleware": []
 }
