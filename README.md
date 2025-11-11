@@ -4,7 +4,7 @@ A fast, single‑page Next.js app to browse the current PlayStation Plus catalog
 
 ## Features
 
-- Next.js App Router with Tailwind CSS + Inter font
+- Next.js App Router and Tailwind CSS + Inter font
 - Serverless API route `/api/psplus` that aggregates and caches for 6h
 - CORS enabled for the API route (GET/OPTIONS)
 - Minimal client fetch (single request), memoized filtering and sorting
